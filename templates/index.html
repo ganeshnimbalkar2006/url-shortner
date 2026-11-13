@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Shortner</title>
+    <style>
+        input{
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>URL Shortner APP</h1>
+    <form method="post">
+        <label for="lonclg_url">Enter your long url</label>
+        <input type="text" id="long_url" name="long_url" required />
+        <button type="submit">Make it short</button>
+    </form>
+
+
+    {% if short_url %}
+
+    <p> your short url is : <a href="{{ short_url }}" target="_blank"> {{ short_url }} </a>  </p>
+
+    {% endif %}
+
+</body>
+</html>
